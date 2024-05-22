@@ -1,0 +1,104 @@
+<!DOCTYPE html>             <!-- tells browser you are using HTML5 -->
+<html lang="en">
+<head>                      <!-- container for metadata/ code lai thahuna parne kura haru not display garne kura haru-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Form</title>        <!-- page title -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+   function msg()
+   {
+    alert("welcome ");
+   }
+  </script>
+</head>
+
+<body>                                <!-- display garne part haru -->
+  <div class="Box">
+    <div class="container">
+      <h1>Online Form</h1>
+      <div>
+
+        <label for="name">
+          Name
+        </label>
+        <input type="text" id="name">
+      </div>
+       
+      <div>
+        <label for="phone">
+          Phone
+        </label>
+        <input type="number" id="phone">
+      </div>
+
+      <div>
+        <label for="email">
+          Email
+        </label>
+        <input type="text" id="email">
+      </div>
+
+      <div>
+        <label>
+          Gender
+        </label>
+        <input class="radio-btn" type="radio" name="gender">
+        Male
+        <input class="radio-btn" type="radio" name="gender">
+        Female
+        <input class="radio-btn" type="radio" name="gender">
+        Other
+      </div>
+      
+
+      <div>
+        <label for="address">
+          Address
+        </label>
+        <input type="text" id="address">
+      </div>
+
+       <div>
+         <label for="hobbies">
+           Hobbies
+          </label>
+          <input type="text" id="hobbies">
+        </div>
+
+        <div>
+          <label>
+            Skills
+          </label>
+          <input type="checkbox" name="skills"> HTML
+          <input type="checkbox" name="skills"> CSS
+          <input type="checkbox" name="skills"> JAVA
+          <input type="checkbox" name="skills"> PYTHON
+        </div>
+        
+      <div>
+
+        <label>
+          Country
+        </label>
+        <select name="country">
+          <option value="">Select the country</option>
+          <option value="">Nepal🇳🇵</option>
+          <option value="">India🇮🇳</option>
+          <option value="">China🇨🇳</option>
+          <option value="">Indonesia🇮🇩</option>
+          <option value="">USA🇺🇸</option>
+        </select>
+      </div>
+
+       <div>
+         <button onclick="msg()">
+           Submit
+          </button>
+        </div>
+      </div>  
+    </div>
+    </body>
+</html>
+

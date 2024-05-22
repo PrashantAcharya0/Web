@@ -1,0 +1,23 @@
+500 px width 
+form center align 
+input field 200px
+radio same line(50px)
+50px checkbox
+submit button blue 
+padding 4px, border-radius : 4px
+margin: 10px
+
+3 ta type ma css lekhna milxa
+inline 
+internal
+external
+
+yedi head bhitra css lekhyo bhane tyo internal css hunxa
+
+tag ma kehyo bhane chai inline css hunxa
+
+ani ako css file banayera lekhyo bhane external css
+
+
+priority chai inline>internal>external
+

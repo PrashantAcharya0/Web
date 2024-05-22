@@ -1,0 +1,62 @@
+.Box
+    {
+     background-color: palegoldenrod;
+     padding: 200px;
+     border-radius: 10px;
+     display: flex;                    
+     justify-content: center;
+     border: 2px solid black;
+     align-items: center;
+    }
+
+    h1
+    {
+      text-align: center;
+    }
+
+    .container input
+    {
+      width: 200px;
+      margin: 8px;
+      padding: 4px;
+      border-radius: 20px;
+    }
+    
+    input[type='radio']
+    {
+      width: 20px;
+      height: 15px;
+    }
+    
+    input[type='checkbox']
+    {
+      width: 20px;
+      height: 14px;
+    }
+    
+    select
+    {
+      width: 180px;
+      height: 22px;
+      padding: 2px 18px;
+      font-size: 14px;
+    }
+
+    button
+    {
+      background-color: blue;
+      color: black;
+      margin-top: 20px;
+      margin-left: 50px;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    @media(max-width:720px)
+    {
+        body
+        {
+            color: yellowgreen;
+            
+        }
+    }

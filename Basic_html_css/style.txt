@@ -19,5 +19,5 @@ tag ma kehyo bhane chai inline css hunxa
 ani ako css file banayera lekhyo bhane external css
 
 
-priority chai inline>internal>external
+priority chai: inline>internal>external
 

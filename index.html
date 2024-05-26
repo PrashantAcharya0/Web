@@ -1,0 +1,247 @@
+<!DOCTYPE html>             <!-- tells browser you are using HTML5 -->
+<html lang="en">
+<head>                      <!-- container for metadata/ code lai thahuna parne kura haru not display garne kura haru-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Form</title>        <!-- page title -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function msg()
+    {
+     alert("Welcome");
+    }
+
+    function validate()
+    {
+      var isvalid = true;
+    // Name bala part ko validation ko lai 
+     var name = document.getElementById("name").value;
+     //var uname = document.getElementsByClassName("uname")
+     //console.log(uname);
+     // if case invalid huda ko lai 
+     if(name.length == 0)
+     {
+       document.getElementById("nerror").innerHTML="Enter a valid name";
+       isvalid = false;
+     }
+     // else chai feri valid halepaxi tyo msg gayep garna ko lai
+     else
+     {
+      document.getElementById("nerror").innerHTML="";
+     }
+
+    // Phone bala part ko validation ko lai 
+    var phone = document.getElementById("phone").value;
+    //var uphone = document.getElementsByClassName("uphone")
+     //console.log(uphone);
+     if(phone.length != 10)
+     {
+       document.getElementById("perror").innerHTML="Invalid number";
+       isvalid = false;
+     }
+     else
+     {
+      document.getElementById("perror").innerHTML="";
+     }
+     
+    // email bala part ko validation ko lai 
+    //regex lina parxa email ko lai 
+    var email = document.getElementById("email").value;
+     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(email))
+    {
+      document.getElementById("eerror").innerHTML = "Invalid email address";
+      isValid = false;
+    } 
+    else 
+    {
+      document.getElementById("eerror").innerHTML = "";
+    }
+
+    // Gender bala part ko validation ko lai 
+     var gender_obj = document.getElementsByClassName("radio-btn")
+     var genderSelected = false;
+     for(var i =0; i<gender_obj.length; i++)
+     {
+      if(gender_obj[i].checked)
+      {
+        genderSelected = true;
+        break;
+      }
+     }
+     if(!genderSelected)
+     {
+      document.getElementById("gerror").innerHTML = "Select your gender";
+      isvalid =false;
+     }
+     else
+     {
+      document.getElementById("gerror").innerHTML ="";
+     }
+     
+
+    // Address bala part ko validation ko lai 
+      var address = document.getElementById("address").value;
+      //var uaddress = document.getElementsByClassName("uaddress")
+      if (address.length < 5) 
+      {
+        document.getElementById("aerror").innerHTML = "Enter a valid address";
+        isvalid = false;
+      }
+      else
+     {
+      document.getElementById("aerror").innerHTML ="";
+     }
+     
+     // hobbies bala part ko lai 
+      var hobbies = document.getElementById("hobbies").value;
+      if (hobbies.length == 0) 
+      {
+        document.getElementById("herror").innerHTML = "Enter your hobbies";
+        isvalid = false;
+      } 
+      else 
+      {
+        document.getElementById("herror").innerHTML = "";
+      }
+
+    // Skills bala part ko lai 
+    var skills = document.getElementsByName("skills");
+    //var uskills = document.getElementsByClassName("uskills")
+    var skillsChecked = false;
+    for (var i = 0; i < skills.length; i++)
+    {
+      if (skills[i].checked) 
+      {
+        skillsChecked = true;
+        break;
+      }
+    }
+    if (!skillsChecked) 
+    {
+      document.getElementById("serror").innerHTML = "Select at least one skill";
+      isValid = false;
+    } 
+    else
+    {
+      document.getElementById("serror").innerHTML = "";
+    }
+
+    // country bala part ko lai
+    var country = document.getElementById("country").value;
+    if (country === "")
+    {
+      document.getElementById("cerror").innerHTML = "Select your country";
+      isValid = false;
+    } 
+    else 
+    {
+      document.getElementById("cerror").innerHTML = "";
+    }
+    return isvalid;
+  }
+
+   </script>
+</head>
+
+<body>                                <!-- display garne part haru -->
+  <div class="Box">
+    <div class="container">
+      
+      <!-- a herf is used to add link to the page  -->
+      <h1>Online Form</h1>
+      <div>
+
+        <label for="name">
+          Name
+        </label>
+        <input type="text" id="name">
+        <p id="nerror" ></p>
+      </div>
+      
+      <div>
+
+        <label for="phone">
+          Phone
+        </label>
+        <input type="text" id="phone">
+        <p id ="perror"></p>
+      </div> 
+      <div>
+
+        <label for="email">
+          Email
+        </label>
+        <input type="text" id="email">
+        <p id = "eerror"></p>
+      </div>
+      
+      <div>
+        <label>
+          Gender
+        </label>
+        <input class="radio-btn" type="radio" name="gender">MALE
+        <input class="radio-btn" type="radio" name="gender">FEMALE
+        <input class="radio-btn" type="radio" name="gender">OTHER
+        <p id = "gerror"></p>
+      </div>
+      
+      <div>
+        <label for="address">
+          Address
+        </label>
+        <input type="text" id="address">
+        <p id = "aerror"></p>
+      </div>
+      
+      <div>
+        <label for="hobbies">
+          Hobbies
+        </label>
+        <input type="text" id="hobbies">
+        <p id = "herror"></p>
+      </div>        
+      <div>
+
+        <label>
+          Skills
+        </label>
+        <input type="checkbox" name="skills"> HTML
+        <input type="checkbox" name="skills"> CSS
+        <input type="checkbox" name="skills"> JAVA
+        <input type="checkbox" name="skills"> PYTHON
+        <p id = "serror"></p>
+      </div>  
+      <div>
+
+        <label>
+          Country
+        </label>
+        <select name="country" id="country" onchange="">
+          <option value="">Select the country</option>
+          <option value="Nepal🇳🇵">Nepal🇳🇵</option>
+          <option value="India🇮🇳">India🇮🇳</option>
+          <option value="China🇨🇳">China🇨🇳</option>
+          <option value="USA🇺🇸">USA🇺🇸</option>
+          <option value="Spain🇪🇸">Spain🇪🇸</option>
+        </select>
+        <p id = "cerror"></p>
+      </div>
+
+       <button onclick="validate();">
+        Submit
+       </button>
+       
+
+       <div>
+         <p>
+           futhermore:
+           <a href="https://github.com/theblitheguy">MyProfile</a> 
+          </p>
+        </div>       
+      
+      
+    </div>
+  </div>  
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="function.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        <h1>ONLINE FORM</h1>
+
+        <form action="form.php" method="POST">
+          <div id="user_name" class="user_name">
+            Username
+            <input type="text" id="uname" name="name" oninput="check_error()" />
+          </div>
+
+          <div id="phone" class="Phone">
+            Phone
+            <input type="text" id="phone" name="phone" />
+            <!-- <p class="error" id="phone_error"></p> -->
+          </div>
+
+          <div class="Email">
+            Email
+            <input type="text" id="email" name="email" />
+            <p class="error" id="email_error"></p>
+          </div>
+
+          <div class="Gender">
+            Gender
+            <input
+              class="gender-radio"
+              type="radio"
+              name="Gender"
+              id="gender1"
+              value="Male"
+            />
+            Male
+            <input
+              class="gender-radio"
+              type="radio"
+              name="Gender"
+              id="gender2"
+              value="Female"
+            />
+            Female
+            <input
+              class="gender-radio"
+              type="radio"
+              name="Gender"
+              id="gender3"
+              value="Others"
+            />
+            Others
+            <div class="Address">
+              Address
+              <input type="text" id="address" name="address" />
+              <p class="error" id="address_error"></p>
+            </div>
+
+            <p class="error" id="gender_error"></p>
+          </div>
+
+          <div class="skills">
+            Skills
+            <input type="checkbox" name="skills[]" value="HTML" />HTML
+            <input type="checkbox" name="skills[]" value="CSS" />CSS
+            <input type="checkbox" name="skills[]" value="Python" />Python
+
+            <p class="error" id="skill_error"></p>
+          </div>
+
+          <div class="country">
+            Select a country:
+            <select name="country" id="country">
+              <option value="">Select the country</option>
+              <option value="Nepal">Nepal🇳🇵</option>
+              <option value="India">India🇮🇳</option>
+              <option value="China">China🇨🇳</option>
+              <option value="USA">USA🇺🇸</option>
+              <option value="spain">spain🇪🇸</option>
+            </select>
+            <p class="error" id="country_error"></p>
+          </div>
+
+          <div>
+            <button class="submit_button" onclick="ValidateForm()">
+              Submit
+            </button>
+            <p class="errror" id="error_empty"></p>
+          </div>
+
+          <div>
+            <p>
+              futhermore:
+              <a href="https://github.com/theblitheguy">MyProfile</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
